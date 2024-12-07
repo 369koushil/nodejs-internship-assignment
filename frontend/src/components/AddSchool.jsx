@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-const baseURL = import.meta.env.VITE_BASE_URL;
+const baseURL = process.env.VITE_API_URL;
 
 
     const AddSchool = () => {
