@@ -6,7 +6,7 @@ This is a backend project built with the **Hono Framework**, **Prisma ORM**, and
 
 ## Features
 - Lightweight and fast backend using the **Hono Framework**.
-- Database management with **Prisma ORM** and SQl.
+- Database management with **Prisma ORM** and SQL.
 - Deployed on **Cloudflare Workers** for serverless execution.
 - Connection pooling with **Prisma Accelerate**.
 - Endpoints to check backend status, add schools, and retrieve sorted school data.
