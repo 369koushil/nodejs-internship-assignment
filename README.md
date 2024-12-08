@@ -13,6 +13,69 @@ This is a backend project built with the **Hono Framework**, **Prisma ORM**, and
 
 ---
 
+## Git Repository Setup
+
+Follow these steps to clone and set up the project:
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/369koushil/nodejs-internship-assignment
+cd nodejs-internship-assignment
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Set Environment Variables
+Create a `.env` file in the root directory and add your environment variables:
+```env
+DATABASE_URL="database-connection-string"
+```
+
+### 4. Run locally
+```bash
+wrangler dev
+```
+
+### 4. complie ts to js files
+```bash
+tsc -b
+```
+---
+
+## Deployment Guide (Cloudflare Workers)
+
+### 1. Install Wrangler CLI
+Install the Wrangler CLI to manage Cloudflare Workers:
+```bash
+npm install -g wrangler
+```
+
+### 2. Authenticate with Cloudflare
+```bash
+wrangler login
+```
+
+### 3. Configure Wrangler
+Update the `wrangler.toml` file with your Cloudflare account details:
+```toml
+name = "hono-backend"
+type = "javascript"
+account_id = "your-cloudflare-account-id"
+workers_dev = true
+compatibility_date = "2024-12-08"
+```
+
+### 4. Deploy 
+
+```bash
+wrangler deploy
+```
+
+---
+
 ## Base Deloyed URL
 `https://backend.kkr345.workers.dev/api/v1/schools`
 
@@ -101,69 +164,3 @@ GET /listSchools?latitude=40.7128&longitude=-74.0060
   }
 ]
 ```
-
----
-
-## Git Repository Setup
-
-Follow these steps to clone and set up the project:
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/369koushil/nodejs-internship-assignment
-cd nodejs-internship-assignment
-```
-
-### 2. Install Dependencies
-```bash
-npm install
-```
-
-### 3. Set Environment Variables
-Create a `.env` file in the root directory and add your environment variables:
-```env
-DATABASE_URL="database-connection-string"
-```
-
-### 4. Run locally
-```bash
-wrangler dev
-```
-
-### 4. complie ts to js files
-```bash
-tsc -b
-```
----
-
-## Deployment Guide (Cloudflare Workers)
-
-### 1. Install Wrangler CLI
-Install the Wrangler CLI to manage Cloudflare Workers:
-```bash
-npm install -g wrangler
-```
-
-### 2. Authenticate with Cloudflare
-```bash
-wrangler login
-```
-
-### 3. Configure Wrangler
-Update the `wrangler.toml` file with your Cloudflare account details:
-```toml
-name = "hono-backend"
-type = "javascript"
-account_id = "your-cloudflare-account-id"
-workers_dev = true
-compatibility_date = "2024-12-08"
-```
-
-### 4. Deploy 
-
-```bash
-wrangler deploy
-```
-
-
-
